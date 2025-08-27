@@ -1,0 +1,49 @@
+# Python cache and build
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+# (streamlit stores config and credentials here – usually safe to ignore)
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Local AWS config/credentials (never commit secrets!)
+.aws/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.iml
+
+# FAISS index files (large binary index files shouldn’t be versioned)
+*.faiss
+*.index
+
+# PDF uploads (avoid committing user files)
+*.pdf
+uploads/
+data/
+docs/
