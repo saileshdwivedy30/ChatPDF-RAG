@@ -76,7 +76,7 @@ def _sha1(b: bytes) -> str:
 def extract_docs_from_uploads(files) -> list[Document]:
     docs: list[Document] = []
     for f in files:
-        data = f.getvalue()  # <-- works regardless of current pointer
+        data = f.getvalue()  # works regardless of current pointer
         if not data:
             continue
         file_hash = _sha1(data)
