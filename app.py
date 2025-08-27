@@ -314,7 +314,7 @@ def main():
         except ClientError as e:
             msg = str(e)
             if "on-demand throughput isn’t supported" in msg:
-                st.error("This model version needs an Inference Profile. Use Haiku 20240307 (on-demand) or provide an inference profile ARN.")
+                st.error("This model version needs an Inference Profile.")
             else:
                 st.error(f"Bedrock error: {e}")
         except Exception as e:
