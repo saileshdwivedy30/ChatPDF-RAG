@@ -36,7 +36,7 @@ Upload PDFs → index them on the fly with FAISS → query with Claude 3 Haiku �
 ---
 
 ## 🏗️ Architecture
-```mermaid
+```
 flowchart TD
     A[Upload PDFs] --> B[Extract text per page]
     B --> C[Chunking (2000/200)]
@@ -80,9 +80,6 @@ langchain-aws
 ```bash
 streamlit run app.py
 ```
-
-Then open [http://localhost:8501](http://localhost:8501).
-
 ---
 
 ## 🎯 Usage
