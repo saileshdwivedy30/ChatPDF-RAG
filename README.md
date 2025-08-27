@@ -11,12 +11,12 @@ Upload PDFs → index them on the fly with FAISS → query with Claude 3 Haiku �
 ## 🚀 Features
 - **PDF ingestion (in-memory):** Upload multiple PDFs, extract text per page, no disk writes.  
 - **Deduplication:** Stable `doc_id` prevents duplicate indexing across sessions.  
-- **Chunking:** Smart splitting (`2000 chars`, `200 overlap`) using LangChain’s RecursiveCharacterTextSplitter.  
+- **Chunking:** Smart splitting using LangChain’s RecursiveCharacterTextSplitter.  
 - **Embeddings:** [Amazon Titan Embeddings v2](https://aws.amazon.com/bedrock/) via Bedrock.  
 - **Vector Store:** [FAISS](https://faiss.ai/) for fast similarity search (kept in session).  
 - **LLM:** [Claude 3 Haiku](https://www.anthropic.com/news/claude-3-family) via Bedrock (fast + low-latency).  
 - **Custom QA chain:**  
-  - Short, citation-first prompt (≤120 words).  
+  - Short, citation-first prompt.  
   - Exponential backoff for throttling.  
   - Per-file support scoring (token overlap + fuzzy match).  
   - Shows only **strongest supporting sources** (≤2 per answer).  
@@ -56,7 +56,7 @@ app.py        # Streamlit app with full RAG pipeline
 
 ---
 
-## ⚡ Quickstart
+## Quickstart
 
 ### Prerequisites
 - Python 3.9+
