@@ -184,7 +184,7 @@ def _answer_tokens(text: str) -> set[str]:
     return set(re.findall(r"[a-z0-9][a-z0-9\-]{2,}", (text or "").lower()))
 
 def _support_score(answer: str, text: str) -> float:
-    """How well does `text` support `answer`? Combines token overlap + fuzzy similarity."""
+    # How well does text support answer? Combines token overlap + fuzzy similarity.
     a = (answer or "").lower()
     t = (text or "").lower()
 
@@ -197,7 +197,7 @@ def _support_score(answer: str, text: str) -> float:
 
 
 def answer_with_sources(llm, vectorstore, query, k=6):
-    """Answer and cite only files that *strongly* support the final answer."""
+    # Answer and cite only files that *strongly* support the final answer.
     MIN_SUPPORT_ABS = 0.18         # drop weak matches outright
     SECOND_SUPPORT_REL = 0.65      # keep #2 only if close to #1
     MAX_SOURCES = 2
